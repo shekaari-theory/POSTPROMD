@@ -22,7 +22,7 @@
 >       dt0 = Timestep included in the 1st row, 2nd column of the QE md output file "cp.pos";
 >      dt00 = Timestep in the QE md input file;
 >  delta_r0 = Move step/scale from center of mass (COM) of the system on, it is a very sensitive parameter, the value 0.0005 \AA works well;
->     rmax0 = Distance from COM to the outermost shell of the system, Example: 5 \AA for B_36 nanocluster, refer to https://doi.org/10.1088/2053-1591/aaeaa6.
+>     rmax0 = Distance from COM to the outermost shell of the system, Example: 5 \AA for B_36 nanocluster, (https://doi.org/10.1088/2053-1591/aaeaa6).
 >
 > Code Details:
 >
