@@ -50,7 +50,10 @@
 > 6- To compute MSD: bash msd.sh
 > 7- To compute RDF: bash rdf.sh
 --------------------------------
-> Example File: This distribution contains an example file that simulates molecular dynamics of the unit cell of SLSiN (single-layer Si_3N_4), containing 14 atoms, within the Car-Parrinello approach, at T = 5 K. For more information on SLSiN, please refer to https://doi.org/10.1016/j.commatsci.2020.109693.
+> Example File: This distribution contains an example file that simulates molecular dynamics of the unit cell of SLSiN (single-layer Si_3N_4), containing 14 atoms, within the Car-Parrinello
+>
+> approach, at T = 5 K. For more information on SLSiN, please refer to https://doi.org/10.1016/j.commatsci.2020.109693.
+> 
 > ---------------
 > Version: 1.0.0
 > 
