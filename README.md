@@ -22,44 +22,69 @@ Purpose: To compute three important phase transition indicators including: the L
 Main input files: cp.pos and par.dat.
 
 par.dat: contains a number of QE MD numerical parameters as follows:
-       n0 = Total number of particles (also included in QE md input file).
-   nstep0 = Total number of steps (also included in QE md input file).
-  iprint0 = Number of steps between successive output writings (also included in QE md input file).
-     ign0 = Number of steps for thermalization/thermal equilibration, usually about 1000 or 2000 steps, to have reliable statistical averages.
-      dt0 = Time-step included in the 1st row, 2nd column of the QE md output file cp.pos.
-     dt00 = Time-step in the QE md input file.
+
+ n0 = Total number of particles (also included in QE md input file).
+       
+nstep0 = Total number of steps (also included in QE md input file).
+
+iprint0 = Number of steps between successive output writings (also included in QE md input file).
+
+ign0 = Number of steps for thermalization/thermal equilibration, usually about 1000 or 2000 steps, to have reliable statistical averages.
+
+dt0 = Time-step included in the 1st row, 2nd column of the QE md output file cp.pos.
+
+dt00 = Time-step in the QE md input file.
+
 delta\_r0 = Move step/scale from center of mass (COM) of the system on, it is a very sensitive parameter, the value 0.0005 \AA works well.
-    rmax0 = Distance from COM to the outermost shell of the system, Example: 5 \AA for B$_{36}$ nanocluster (https://doi.org/10.1088/2053-1591/aaeaa6).
+
+rmax0 = Distance from COM to the outermost shell of the system, Example: 5 \AA for B$_{36}$ nanocluster (https://doi.org/10.1088/2053-1591/aaeaa6).
 
 Code Details:
 
-lind.sh
-    Purpose: Computes the Lindemann index (root-mean-square bond length fluctuation/delta\_rms) of a system of atoms/particles.
+1- lind.sh
+
+Purpose: Computes the Lindemann index (root-mean-square bond length fluctuation/delta\_rms) of a system of atoms/particles.
+    
 Input files: cp.pos | par.dat | ln.source
+
 Output file: No file
 
-msd.sh
-     Purpose: Computes mean square displacement of every atom/particle of the system.
- Input files: cp.pos | par.dat | msd.source
+2- msd.sh
+
+Purpose: Computes mean square displacement of every atom/particle of the system.
+
+Input files: cp.pos | par.dat | msd.source
+
 Output files: msd***.dat contained in directory msd_output_files. The user has to plot the output files each containing 2 columns of data, in order: time-step and MSD.
 
-rdf.sh
-    Purpose: Computes radial distribution function (RDF) of a system of atoms/particles.
+3- rdf.sh
+
+Purpose: Computes radial distribution function (RDF) of a system of atoms/particles.
+
 Input files: cp.pos | par.dat | rdf.source
+
 Output file: rdf5.dat contained in directory rdf_output_file, including 5 columns, in order: r, rdf on xy plane, rdf on xz plane, rdf on yz plane, and rdf in three dimensions. The user also has to plot this file.
  
 How To Run:
+
 1- No need to install.
+
 2- Unzip POSTPROMD compressed file.
+
 3- Put the QE MD output file cp.pos in POSTPROMD root directory.
+
 4- Edit the file par.dat as described above.
+
 5- To compute Lindemann index, run in terminal: bash lind.sh
+
 6- To compute MSD, run in terminal: bash msd.sh
+
 7- To compute RDF, run in terminal: bash rdf.sh
 
 Example File: This distribution contains an example file that simulates molecular dynamics of the unit cell of SLSiN (single-layer Si$_3$N$_4$), containing 14 atoms, within the Car-Parrinello approach, at T = 5 K. For more information on SLSiN, please refer to https://doi.org/10.1016/j.commatsci.2020.109693.
 
 Version: v.1.0.0
+
 Name: postpromd-v.1.0.0
 
 POSTPROMD logo: ./postpromd-high-resolution-logo.png
