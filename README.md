@@ -1,6 +1,6 @@
 R E A D M E
 
-This is the first distribution of POST-PROMD: a post-processor package for all-scale/all-atom molecular dynamics (MD) simulations.
+This is the first distribution of POST-PROMD: a POST-PROcessor package for all-scale/all-atom Molecular Dynamics (MD) simulations.
 
 Programmer: Ashkan Shekaari
 
@@ -14,7 +14,7 @@ Orcid: https://orcid.org/0000-0002-7434-467X
 
 Please, refer to https://doi.org/10.1088/2053-1591/aaeaa6 for information about the mathematical relations used in POST-PROMD.
 
-Written in: Fortran and BASH
+Written in: Fortran 95 & Bash
 
 Operating System: Linux
 
